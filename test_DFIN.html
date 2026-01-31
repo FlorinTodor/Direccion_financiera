@@ -720,16 +720,127 @@ const RAW_DATA = [
     { b: 18, q: "8. (Examen Extra 2020) Si llamamos x₁ a la proporción del presupuesto invertida en el activo libre de riesgo, y x₂ a la proporción del presupuesto destinada a activos con riesgo, determine cuál de las siguientes afirmaciones es correcta:", o: ["Si 1>x₁>0 y 0<x₂<1, nos encontramos ante una cartera mixta de inversión en letras del tesoro y cartera de acciones.", "Si x₁>1 y 0<x₂<1, nos encontramos ante una cartera mixta con préstamo.", "Si x₁<0 y 0<x₂<1, nos encontramos ante una cartera mixta con endeudamiento.", "Si x₁=1 y x₂=0, todo el presupuesto estará invertido en el activo con riesgo."], a: 0, exp: "a) Correcto: si 0<x₁<1 y 0<x₂<1 con x₁+x₂=1, es una cartera mixta normal. b) Falso: si x₁>1, implicaría x₂<0 (venta en corto de activos con riesgo), no 0<x₂<1. c) Falso: si x₁<0 (endeudamiento), entonces x₂>1 (no 0<x₂<1). d) Falso: si x₁=1 y x₂=0, todo está en el activo libre de riesgo, no en el activo con riesgo." },
     
     // --- EXAMEN ENERO 2026 (Bloque 19) ---
-    { b: 19, q: "1. (Examen Enero 2026) Cuando un inversor invierte en una cartera P (mixta) formada por una cartera de títulos con riesgo, S, y por el activo libre de riesgo, podemos afirmar que:", o: ["Podemos distinguir entre una cartera con préstamo y otra con endeudamiento en función de las proporciones invertidas en el activo con riesgo y el libre de riesgo.", "Es más rentable, aunque también más arriesgada, una cartera con préstamo que una cartera con endeudamiento.", "Es más rentable, aunque también más arriesgada, una cartera con endeudamiento que una cartera con préstamo.", "Las respuestas a y c son correctas."], a: 3, exp: "Cartera con préstamo: parte del presupuesto se invierte en el activo libre de riesgo (x₁>0, x₂<1). Cartera con endeudamiento: se pide prestado para invertir más en activos con riesgo (x₁<0, x₂>1). Con endeudamiento se amplifica tanto la rentabilidad esperada como el riesgo. Por tanto, a y c son correctas." },
-    { b: 19, q: "2. (Examen Enero 2026) Según las proposiciones de MM con deuda y sin impuestos, si Rd<Ra, indique cuál de las siguientes afirmaciones es correcta:", o: ["Un incremento del endeudamiento provocará una disminución de Re.", "Un incremento del endeudamiento provocará un incremento de Re.", "El coste medio ponderado del capital, CMPC, disminuirá a medida que se incremente el nivel de endeudamiento.", "Las respuestas b y c son correctas."], a: 3, exp: "Según MM Proposición II sin impuestos: Re = Ra + (D/E)(Ra - Rd). Si Ra > Rd, al aumentar D/E, Re aumenta. El CMPC sin impuestos permanece constante en Ra, pero en la interpretación tradicional puede considerarse que la opción d es correcta porque tanto b como c pueden aplicar en ciertos contextos con impuestos donde el CMPC baja por el escudo fiscal." },
-    { b: 19, q: "3. (Examen Enero 2026) Una empresa va a realizar una inversión de 8.250€, cuya vida útil es de 5 años. El valor residual del activo es nulo y se amortiza de forma lineal. Los cobros/pagos anuales por cuenta de esta inversión ascienden a 5.000/2.800€, respectivamente. Si la tasa impositiva es del 25%, se pide calcular el VAN de la inversión suponiendo que se financia íntegramente con fondos propios cuyo coste es del 10% anual. Indique la correcta:", o: ["1.020,79€", "100,35€", "426,99€", "Ninguna de las respuestas anteriores es correcta."], a: 2, exp: "Amortización = 8.250/5 = 1.650€/año. BAIT = 5.000 - 2.800 - 1.650 = 550€. Impuestos = 550 × 0,25 = 137,5€. FCL = 550 - 137,5 + 1.650 = 2.062,5€/año. VAN = -8.250 + 2.062,5 × [(1-1,1^-5)/0,1] = -8.250 + 2.062,5 × 3,7908 = -8.250 + 7.818,27 ≈ -431,73€. Verificando con otra fórmula: FC = (5.000-2.800)×(1-0,25) + 1.650×0,25 = 1.650 + 412,5 = 2.062,5. VAN ≈ 426,99€ según las opciones." },
-    { b: 19, q: "4. (Examen Enero 2026) Indique cuál de las siguientes afirmaciones sobre el riesgo sistemático es correcta:", o: ["Es diversificable.", "Genera prima de riesgo.", "No depende de las fluctuaciones del mercado.", "Las respuestas a y c son correctas."], a: 2, exp: "Respuesta marcada como c) en el examen." },
-    { b: 19, q: "5. (Examen Enero 2026) Indique cuál de las siguientes afirmaciones es correcta respecto del reequilibrio de la deuda y sus escudos fiscales:", o: ["El reequilibrio de la deuda consiste en mantener constante la ratio de endeudamiento a valores de mercado a lo largo de la vida del proyecto.", "Cuando la empresa reequilibra la deuda, el valor de los ahorros fiscales que generan los intereses de la deuda es independiente del valor del proyecto.", "El reequilibrio de la deuda hace que el coste de oportunidad del capital se incremente.", "Las respuestas a y b son correctas."], a: 3, exp: "El reequilibrio implica mantener D/V constante, ajustando la deuda según cambia el valor del proyecto. Por tanto, el valor de los ahorros fiscales depende del valor del proyecto (cambia con él). Las opciones a y b son correctas porque: a) define correctamente el reequilibrio, y b) cuando se reequilibra, los AF tienen el mismo riesgo que el proyecto." },
-    { b: 19, q: "6. (Examen Enero 2026) El precio de una acción P₀ puede ser calculado como el valor capitalizado de los beneficios medios bajo una política de no crecimiento más el valor actual de las oportunidades de crecimiento, es decir: P₀ = BPA/r + VAOC:", o: ["El VAOC es siempre positivo cuando la empresa reinvierte parte de sus beneficios en proyectos rentables.", "El VAOC representa el valor presente de las oportunidades futuras de crecimiento de la empresa.", "El VAOC será positivo siempre y cuando la empresa reinvierta parte de sus beneficios y espere obtener una tasa superior al coste de oportunidad del capital.", "Las respuestas a y c son correctas."], a: 2, exp: "El VAOC es positivo solo si ROE > r (rentabilidad de reinversión supera el coste de capital). Reinvertir en proyectos con ROE < r destruye valor (VAOC negativo). Por tanto, solo c es correcta: VAOC > 0 requiere reinversión Y ROE > r." },
-    { b: 19, q: "7. (Examen Enero 2026) Una empresa adquirió un activo hace 5 años por 12.000€, cuya vida útil es de 10 años sin valor residual. La empresa prevé utilizar el activo 3 años más y venderlo por 3.000€ al final del tercer año. ¿Cuál será el valor residual después de impuestos de este equipo, si el tipo impositivo es del 25%?", o: ["2.400€", "2.850€", "3.150€", "3.000€"], a: 0, exp: "Amortización anual = 12.000/10 = 1.200€. Amortización acumulada (8 años) = 1.200 × 8 = 9.600€. VNC = 12.000 - 9.600 = 2.400€. Ganancia/Pérdida = 3.000 - 2.400 = 600€. Impuesto = 600 × 0,25 = 150€. VRdi = 3.000 - 150 = 2.850€. Sin embargo, si interpretamos que solo se usa 3 años más desde ahora: Amort acum = 5×1.200 + 3×1.200 = 9.600€. VNC = 2.400€. La respuesta a (2.400€) podría ser el VNC, no el VRdi." },
-    { b: 19, q: "8. (Examen Enero 2026) El precio de una obligación que paga un cupón anual del 6% sobre el nominal (1.000€), con vencimiento dentro de 3 años y cuya TIR es del 5%, es:", o: ["972,77€", "1.027,23€", "1.000€", "1.054,46€"], a: 1, exp: "Cupón = 1.000 × 6% = 60€/año. Precio = 60/1,05 + 60/1,05² + 1.060/1,05³ = 57,14 + 54,42 + 915,67 = 1.027,23€. Como el cupón (6%) > TIR (5%), el bono cotiza con prima (por encima del nominal)." },
-    { b: 19, q: "9. (Examen Enero 2026) Una empresa desea realizar el análisis de un nuevo proyecto de inversión que financiará de forma similar al resto de proyectos actuales de la empresa y que presenta idéntico riesgo económico. Si la empresa desea evaluar el proyecto teniendo en cuenta los efectos derivados de la financiación, indique cuál de las siguientes afirmaciones es correcta:", o: ["Descontará los flujos de caja libres del proyecto al CMPC antes de impuestos.", "Descontará los flujos de caja de los accionistas del proyecto al coste de los recursos propios.", "Descontará los flujos de caja libres del proyecto al coste de oportunidad del capital.", "Descontará los flujos de caja libres del proyecto al CMPC después de impuestos."], a: 3, exp: "Para evaluar un proyecto con el mismo riesgo económico y financiero que la empresa, y considerando los efectos de la financiación, se usa el CMPC después de impuestos para descontar los FCL. El CMPC d.i. incorpora el escudo fiscal de la deuda." },
-    { b: 19, q: "10. (Examen Enero 2026) En el supuesto de una empresa sin deuda ni impuestos, el coste de capital CMPC y el valor del proyecto como caso base para el cálculo del VAA:", o: ["Coinciden.", "El coste medio ponderado de capital es mayor.", "El coste de oportunidad del capital es menor.", "Ninguna de las respuestas anteriores es correcta."], a: 0, exp: "Sin deuda ni impuestos: CMPC = Re = Ra (coste de oportunidad del capital). El VAA caso base usa Ra para descontar los FCL. Como CMPC = Ra, ambos métodos dan el mismo resultado. Los valores coinciden." },
+{ 
+ b: 19, 
+ q: "1. Del presupuesto de un inversor, x₁ es la proporción destinada al activo libre de riesgo, y x₂ es la proporción destinada a una cartera de activos con riesgo. Indique cuál de las siguientes afirmaciones es falsa:", 
+ o: [
+    "Si 1 > x₁ > 0 y 0 < x₂ < 1, nos encontramos ante una cartera mixta con préstamo. La rentabilidad esperada de esta cartera mixta será inferior a la rentabilidad esperada de la cartera de activos con riesgo.",
+    "Si 1 > x₁ > 0 y 0 < x₂ < 1, nos encontramos ante una cartera mixta con préstamo. El riesgo asociado a esta cartera mixta, medido por la desviación típica de su rentabilidad, será inferior al de la cartera de activos con riesgo.",
+    "Si 1 > x₁ > 0 y 0 < x₂ < 1, nos encontramos ante una cartera mixta con préstamo. La rentabilidad esperada de esta cartera mixta será superior a la rentabilidad esperada de la cartera de activos con riesgo.",
+    "Si 1 > x₁ > 0 y 0 < x₂ < 1, nos encontramos ante una cartera mixta con endeudamiento. La rentabilidad esperada de esta cartera mixta será superior a la rentabilidad esperada de la cartera de activos con riesgo."
+ ], 
+ a: 3, 
+ exp: "La opción c) tb es FALSA. Cuando 1 > x₁ > 0 y 0 < x₂ < 1, el inversor está prestando parte de su dinero al activo libre de riesgo (cartera con préstamo, NO con endeudamiento). En este caso, la rentabilidad esperada de la cartera mixta será INFERIOR (no superior) a la de la cartera de activos con riesgo, ya que se está combinando con un activo de menor rentabilidad (Rf < Rm). La opción d) también es incorrecta en su clasificación (dice 'endeudamiento' cuando es 'préstamo'), pero la pregunta pide la FALSA respecto a la afirmación económica." 
+  },
+  { 
+    b: 19, 
+    q: "2. Indique cuál de las siguientes afirmaciones es correcta cuando se asume endeudamiento en las empresas y un contexto sin impuestos:", 
+    o: [
+      "La proposición II de MM establece que la rentabilidad requerida a los fondos propios es igual al coste de oportunidad del capital.",
+      "La proposición II de MM establece que la rentabilidad requerida a los fondos propios es igual al coste de medio ponderado de capital después de impuestos.",
+      "La proposición I de MM establece que la rentabilidad adecuada para descontar los flujos de caja libres es igual a la rentabilidad requerida a los fondos propios.",
+      "Ninguna de las afirmaciones anteriores es correcta."
+    ], 
+    a: 3, 
+    exp: "En MM sin impuestos: a) Falso, la Prop. II dice que Ke aumenta con el endeudamiento (Ke > Ko). b) Falso, Ke no es igual al CMPC (Ko). c) Falso, los FCF se descuentan al Ko (coste del capital sin deuda), no al Ke (que es mayor si hay deuda). Por tanto, ninguna es correcta." 
+  },
+  { 
+    b: 19, 
+    q: "3. Un inversor dispone hoy de un presupuesto de 15.000 €. El tipo de interés del mercado de capitales a un año es del 5%. Decide invertir hoy en activos reales 5.000 €, lo que le permite obtener un VAN de 2.500 €, siendo éste el máximo VAN posible. Con esta información, y con un horizonte temporal de un año, ¿cuál es el flujo de caja que el inversor recibirá dentro de un año derivado de su inversión en activos reales?", 
+    o: [
+      "7.625 €",
+      "7.750 €",
+      "7.875 €",
+      "8.125 €"
+    ], 
+    a: 2, 
+    exp: "Aplicando la fórmula del VAN: 2.500 = -5.000 + Q1 / (1,05). Despejando: 7.500 = Q1 / 1,05. Q1 = 7.500 * 1,05 = 7.875 €." 
+  },
+  { 
+    b: 19, 
+    q: "4. Indique cuál de las siguientes afirmaciones es correcta:", 
+    o: [
+      "El riesgo sistemático es diversificable.",
+      "El riesgo sistemático deriva de las características propias de la empresa emisora del título.",
+      "El riesgo sistemático lo asumen todos los inversores del mercado bursátil.",
+      "El riesgo sistemático no se relaciona con el riesgo de mercado."
+    ], 
+    a: 2, 
+    exp: "El riesgo sistemático (o de mercado) es aquel que no puede eliminarse mediante la diversificación y afecta a todos los títulos del mercado. Por tanto, es el riesgo que asumen todos los inversores." 
+  },
+  { 
+    b: 19, 
+    q: "5. Indique cuál de las siguientes afirmaciones es correcta:", 
+    o: [
+        "Cuando se reequilibra la Deuda asumimos que el Ahorro Fiscal es un pasivo tan arriesgado como V (valor de los activos de la empresa)",
+        "Cuando usted aplica la 'regla de los tres pasos' y desapalanca el CMPC después de impuestos, obtiene una tasa que refleja riesgo económico y financiero, según la Proposición II de MM.",
+        "Cuando se reequilibra la Deuda asumimos que el Ahorro Fiscal es un activo menos arriesgado que V (valor de los activos de la empresa)",
+        "Ninguna de las respuestas anteriores es correcta."
+    ], 
+    a: 3, 
+    exp: "Ninguna es correcta. a) El Ahorro Fiscal es un ACTIVO, no un pasivo. b) Al desapalancar el CMPC se obtiene el coste de oportunidad del capital (Ku o rA), que refleja solo el riesgo ECONÓMICO (no el financiero), según la Proposición II de MM. c) Con deuda reequilibrada, el Ahorro Fiscal tiene el MISMO riesgo que V (no menos), por eso se descuenta al coste de oportunidad del capital (Ku)." 
+  },
+  { 
+    b: 19, 
+    q: "6. Respecto a la valoración de acciones ordinarias mediante el método del Valor Actual de las Oportunidades de Crecimiento, indique cuál de las siguientes afirmaciones es correcta.", 
+    o: [
+      "Si el crecimiento esperado de los beneficios g es positivo, entonces VAOC > 0.",
+      "Si ROE > r, entonces VAOC > 0.",
+      "Si P₀ > BPA₁/r, implica que el ratio BPA₁/P₀ estaría subestimando r.",
+      "Si la empresa mantiene una tasa de reparto = 100%, entonces su VAOC > 0."
+    ], 
+    a: 2, 
+    exp: "La opción C es correcta. Si P₀ > BPA₁/r, significa que el precio de la acción es mayor que el valor sin crecimiento (BPA₁/r), lo que implica que existe un VAOC positivo. En este caso, el ratio BPA₁/P₀ sería menor que r, es decir, estaría SUBESTIMANDO la tasa de capitalización r. Esto ocurre porque el precio incorpora el valor de las oportunidades de crecimiento, haciendo que el ratio beneficio-precio sea inferior al coste de capital real." 
+  },
+  { 
+    b: 19, 
+    q: "7. En la valoración de proyectos de inversión, si la diferencia entre el valor residual antes de impuestos de un inmovilizado y su valor neto contable es negativa, indique cuál de las siguientes afirmaciones es correcta.", 
+    o: [
+      "Esta diferencia implica una pérdida procedente del inmovilizado material por el que la empresa tiene que reflejar un ahorro fiscal en su tributación.",
+      "En un proyecto de inversión esta diferencia no puede ser mayor que cero en ningún caso.",
+      "La diferencia supone un beneficio procedente del inmovilizado material por la cual la empresa tiene que tributar.",
+      "Ninguna de las respuestas anteriores es correcta."
+    ], 
+    a: 0, 
+    exp: "Si Valor Residual < Valor Neto Contable, se produce una pérdida patrimonial en la venta del activo. Esta pérdida es deducible fiscalmente, lo que genera un ahorro de impuestos (cash flow positivo derivado del escudo fiscal)." 
+  },
+  { 
+    b: 19, 
+    q: "8. Una obligación (bono) tiene valor nominal 1.000 €, paga un cupón anual del 6% y vence dentro de 4 años. La rentabilidad exigida por el mercado para obligaciones de riesgo similar es del 5% anual (TIR). Suponiendo que los cupones se pagan una vez al año. Indique cuál es el precio teórico del bono hoy:", 
+    o: [
+      "965,46 €",
+      "1.000,00 €",
+      "1.035,46 €",
+      "1.070,92 €"
+    ], 
+    a: 2, 
+    exp: "Precio = 60 * a_4|5% + 1000 * (1,05)^-4. Precio = 60 * 3,546 + 1000 * 0,8227 = 212,76 + 822,70 = 1.035,46 €." 
+  },
+  { 
+    b: 19, 
+    q: "9. En relación con el análisis y selección de proyectos de inversión teniendo en cuenta los efectos derivados de la financiación, indique cuál de las siguientes afirmaciones es correcta:", 
+    o: [
+        "Si la empresa, en sus nuevos proyectos, mantiene inalterado el riesgo económico y financiero, reequilibrando constantemente la relación D/V, la tasa de descuento adecuada para valorar el ahorro fiscal por intereses (método del VAA) es el coste de oportunidad del capital.",
+        "Si la empresa, en sus nuevos proyectos, mantiene inalterado el riesgo económico y financiero, reequilibrando constantemente la relación D/V, la tasa de descuento adecuada para valorar dichos proyectos mediante el VAN es el coste de oportunidad del capital.",
+        "El CMPC después de impuestos es una tasa de descuento que puede aplicarse para valorar el VAN Caso Base de un proyecto de inversión",
+        "Ninguna de las respuestas anteriores es correcta."
+    ], 
+    a: 3, 
+    exp: "Ninguna de las anteriores es correcta. a) Con deuda reequilibrada (D/V constante), el ahorro fiscal tiene el mismo riesgo que los activos, pero la afirmación sobre el coste de oportunidad del capital no es técnicamente precisa en este contexto. b) Para valorar proyectos mediante el VAN con efectos de financiación se usa el CMPC después de impuestos, no el coste de oportunidad del capital. c) El VAN Caso Base asume financiación 100% propia, por lo que se descuenta al coste del capital sin apalancamiento (Ku), no al CMPC después de impuestos que ya incorpora el efecto de la deuda." 
+  },
+  
+  { 
+    b: 19, 
+    q: "10. Indique cuál de las siguientes afirmaciones es correcta.", 
+    o: [
+      "En el contexto con impuestos de Modigliani y Miller, el CMPC después de impuestos de una empresa con deudas es una tasa de descuento que no puede aplicarse para valorar el VAN Caso Base de un proyecto de inversión",
+      "El descuento de flujos de caja nominales siempre se podrá realizar aplicando la tasa de inflación + una prima por riesgo de mercado.",
+      "El Valor Residual de un activo es igual al Valor Contable menos el Fondo de Amortización Acumulado hasta ese momento.",
+      "Ninguna de las respuestas anteriores es correcta."
+    ], 
+    a: 0, 
+    exp: "El VAN Caso Base asume financiación 100% propia (sin deuda), por lo que se debe descontar al coste del capital sin apalancamiento (Ku). El CMPC después de impuestos incorpora el efecto de la deuda, por lo que no es aplicable al Caso Base." 
+  }
     
 ];
 /* ==============================================
